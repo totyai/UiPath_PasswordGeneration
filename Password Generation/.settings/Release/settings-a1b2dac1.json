@@ -21,5 +21,14 @@
   "UiPath.UIAutomationNext.Activities.ClosePopup.PopupAppearTimeout": "30",
   "UiPath.UIAutomationNext.Activities.Logging.SearchLog": "False",
   "UiPath.UIAutomationNext.Activities.Logging.SearchPerformanceLog": "False",
-  "UiPath.UIAutomationNext.Activities.Logging.AuditLogLevel": "Trace"
+  "UiPath.UIAutomationNext.Activities.Logging.AuditLogLevel": "Trace",
+  "UiPath.UIAutomationNext.Activities.Generic.ShowClosestMatchesInSearchError": "True",
+  "UiPath.UIAutomationNext.Activities.Generic.AskAtRuntime": "False",
+  "UiPath.UIAutomationNext.Activities.VerifyExecution.Timeout": "10",
+  "UiPath.UIAutomationNext.Activities.VerifyExecution.Retry": "True",
+  "UiPath.UIAutomationNext.Activities.ApplicationCard.RuntimeBrowser": "None",
+  "UiPath.UIAutomationNext.Activities.ApplicationCard.WebDriverMode": "Disabled",
+  "UiPath.UIAutomationNext.Activities.ApplicationCard.WebDriverAutoDownload": "True",
+  "UiPath.UIAutomationNext.Activities.KeyboardEvents.DelayBetweenKeys": "0.02",
+  "UiPath.UIAutomationNext.Activities.KeyboardEvents.KeyboardShortcutsDelayBetweenKeys": "0.1"
 }

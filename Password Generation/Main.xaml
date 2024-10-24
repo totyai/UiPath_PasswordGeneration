@@ -1,6 +1,6 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="470,371" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="470,371" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:uga="clr-namespace:UiPath.GSuite.Activities;assembly=UiPath.GSuite.Activities" xmlns:ugage="clr-namespace:UiPath.GSuite.Activities.Gmail.Enums;assembly=UiPath.GSuite.Activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:upr="clr-namespace:UiPath.Platform.ResourceHandling;assembly=UiPath.Platform" xmlns:usau="clr-namespace:UiPath.Shared.Activities.Utils;assembly=UiPath.GSuite.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
-    <scg:List x:TypeArguments="x:String" Capacity="24">
+    <scg:List x:TypeArguments="x:String" Capacity="48">
       <x:String>System.Activities</x:String>
       <x:String>System.Activities.Statements</x:String>
       <x:String>System.Activities.Expressions</x:String>
@@ -23,10 +23,31 @@
       <x:String>UiPath.Core</x:String>
       <x:String>UiPath.Core.Activities</x:String>
       <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Activities.Business</x:String>
+      <x:String>UiPath.Excel.Model</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Platform.SyncObjects</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Services.RuntimeAnalyze</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>UiPath.Shared.Activities.Business</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+      <x:String>UiPath.GSuite.Activities.Gmail.Enums</x:String>
+      <x:String>UiPath.Shared.Activities.Utils</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
+      <x:String>UiPath.GSuite.Activities</x:String>
+      <x:String>UiPath.Shared.Activities.ConnectionService.Contracts</x:String>
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg:List x:TypeArguments="AssemblyReference" Capacity="38">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="76">
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
       <AssemblyReference>PresentationCore</AssemblyReference>
@@ -48,13 +69,172 @@
       <AssemblyReference>System.Xml.Linq</AssemblyReference>
       <AssemblyReference>UiPath.System.Activities</AssemblyReference>
       <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.GoogleCloud.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>UiPath.GSuite.Activities</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Portable sequence" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <ueab:SequenceX DisplayName="Single Excel Process Scope" sap:VirtualizedContainerService.HintSize="866,2362" sap2010:WorkflowViewState.IdRef="SequenceX_1">
+    <ueab:SequenceX.Variables>
+      <Variable x:TypeArguments="ue:IWorkbookQuickHandle" Default="[new WorkbookQuickHandle(workbookPath:=&quot;Project_Notebook.xlsx&quot;,visible:=True,autoSave:=False,createNew:=True,readOnly:=False,isWorkspace:=True)]" Name="Notes" />
+    </ueab:SequenceX.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-  </Sequence>
+    <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" SensitivityLabel="{x:Null}" CreateNewFile="False" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="546,2339" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_1" ResizeWindow="None" SensitivityOperation="None" WorkbookPath="[string.Format(&quot;{0}\Learn to Program\UiPath\Password generation\NewJoiners.xlsx&quot;, Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments))]">
+      <ueab:ExcelApplicationCard.Body>
+        <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="Excel" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="512,2047" sap2010:WorkflowViewState.IdRef="Sequence_1">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: Password Generator" sap:VirtualizedContainerService.HintSize="498,1235" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="4d165125-0acf-4d3f-a5ed-3235e7c1bf02" Version="V2">
+              <uix:NApplicationCard.Body>
+                <ActivityAction x:TypeArguments="x:Object">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="464,986" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Password length'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="450,286" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="4d165125-0acf-4d3f-a5ed-3235e7c1bf02" Text="12" Version="V4">
+                      <uix:NTypeInto.Target>
+                        <uix:TargetAnchorable BrowserURL="https://www.rpasamples.com/passwordgenerator" CVScreenId="fe444f71-16d8-42c7-ac72-312229a524b0" CvTextArea="732, 492, 35, 27" CvTextArgument="24" CvType="Text" DesignTimeRectangle="732, 489, 42, 42" DesignTimeScaleFactor="1.25" ElementType="InputBox" FuzzySelectorArgument="&lt;webctrl id='txt-length' tag='INPUT' type='text' class='len-textbox' aaname='' /&gt;" Guid="e4bfefa9-4c6f-4714-b4c7-9db70ba4dabb" InformativeScreenshot="b117105745c25c35e02a9fb9bdc67b03.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Password Generator' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                              <uix:Target CVScreenId="fe444f71-16d8-42c7-ac72-312229a524b0" CvTextArea="497, 494, 231, 32" CvTextArgument="Password length:" CvType="Text" DesignTimeRectangle="499, 492, 230, 33" ElementType="Text" FuzzySelectorArgument="&lt;webctrl class='label-length' tag='SPAN' type='' aaname='Password length:' check:innerText='Password length:' /&gt;" Guid="2ef458b4-5f12-46fa-bbb0-4896fc0f7939" SearchSteps="FuzzySelector, CV" />
+                            </scg:List>
+                          </uix:TargetAnchorable.Anchors>
+                        </uix:TargetAnchorable>
+                      </uix:NTypeInto.Target>
+                      <uix:NTypeInto.VerifyOptions>
+                        <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
+                          <uix:VerifyExecutionTypeIntoOptions.Retry>
+                            <InArgument x:TypeArguments="x:Boolean" />
+                          </uix:VerifyExecutionTypeIntoOptions.Retry>
+                          <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                            <InArgument x:TypeArguments="x:Double" />
+                          </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                        </uix:VerifyExecutionTypeIntoOptions>
+                      </uix:NTypeInto.VerifyOptions>
+                    </uix:NTypeInto>
+                    <ueab:ExcelForEachRowX DisplayName="For Each Excel Row" EmptyRowBehavior="Stop" HasHeaders="True" sap:VirtualizedContainerService.HintSize="450,661" sap2010:WorkflowViewState.IdRef="ExcelForEachRowX_1" Range="[Excel.Sheet(&quot;NewJoiners&quot;)]" SaveAfterEachRow="False">
+                      <ueab:ExcelForEachRowX.Body>
+                        <ActivityAction x:TypeArguments="ue:CurrentRowQuickHandle, x:Int32">
+                          <ActivityAction.Argument1>
+                            <DelegateInArgument x:TypeArguments="ue:CurrentRowQuickHandle" Name="CurrentRow" />
+                          </ActivityAction.Argument1>
+                          <ActivityAction.Argument2>
+                            <DelegateInArgument x:TypeArguments="x:Int32" Name="CurrentIndex" />
+                          </ActivityAction.Argument2>
+                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,446" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Generate new password'" sap:VirtualizedContainerService.HintSize="402,225" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="4d165125-0acf-4d3f-a5ed-3235e7c1bf02" Version="V4">
+                              <uix:NClick.Target>
+                                <uix:TargetAnchorable BrowserURL="https://www.rpasamples.com/passwordgenerator" CVScreenId="7bd9ada7-d03f-42f7-a556-4ddab2e19a47" CvElementArea="1378, 380, 67, 59" CvType="Icon" DesignTimeRectangle="1382, 381, 60, 60" DesignTimeScaleFactor="1.25" ElementType="Button" FuzzySelectorArgument="&lt;webctrl tag='BUTTON' type='' class='pword-button refresh tooltip' aaname='Generate new password' check:text='Generate new password' /&gt;" Guid="4a432f36-2d30-4eea-9930-57a21420e77f" ImageBase64="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" InformativeScreenshot="1f44ed2a2899a3cbb65c775000c061d6.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Password Generator' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+                                  <uix:TargetAnchorable.Anchors>
+                                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                      <uix:Target CVScreenId="7bd9ada7-d03f-42f7-a556-4ddab2e19a47" CvTextArea="725, 291, 486, 45" CvTextArgument="Create a strong password" CvType="Text" DesignTimeRectangle="19, 288, 1900, 48" ElementType="Text" FuzzySelectorArgument="&lt;webctrl class='title-container' tag='DIV' type='' aaname='Create a strong password' check:innerText='Create a strong password' /&gt;" Guid="cacc4296-378e-49d1-81d0-d6b9e1b3f8a8" SearchSteps="FuzzySelector, CV" />
+                                    </scg:List>
+                                  </uix:TargetAnchorable.Anchors>
+                                </uix:TargetAnchorable>
+                              </uix:NClick.Target>
+                              <uix:NClick.VerifyOptions>
+                                <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                                  <uix:VerifyExecutionOptions.Retry>
+                                    <InArgument x:TypeArguments="x:Boolean" />
+                                  </uix:VerifyExecutionOptions.Retry>
+                                  <uix:VerifyExecutionOptions.Timeout>
+                                    <InArgument x:TypeArguments="x:Double" />
+                                  </uix:VerifyExecutionOptions.Timeout>
+                                </uix:VerifyExecutionOptions>
+                              </uix:NClick.VerifyOptions>
+                            </uix:NClick>
+                            <uix:NGetText DisplayName="Get Text 'Create a strong password'" sap:VirtualizedContainerService.HintSize="402,182" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="4d165125-0acf-4d3f-a5ed-3235e7c1bf02" TextString="[CurrentRow.ByField(&quot;password&quot;).StringValue]" Version="V4">
+                              <uix:NGetText.Target>
+                                <uix:TargetAnchorable BrowserURL="https://www.rpasamples.com/passwordgenerator" CVScreenId="7bd9ada7-d03f-42f7-a556-4ddab2e19a47" CvTextArea="419, 394, 701, 57" CvType="AnyWordGroup" DesignTimeRectangle="419, 391, 700, 58" DesignTimeScaleFactor="1.25" ElementType="Text" FuzzySelectorArgument="&lt;webctrl id='generated-password' tag='SPAN' type='' class='password-text' /&gt;" Guid="f60a6821-2064-4a07-a98d-bb4ec8071c8a" InformativeScreenshot="57b5d41edcc5ac2707c67767f8b5c52c.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Password Generator' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+                                  <uix:TargetAnchorable.Anchors>
+                                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                      <uix:Target CVScreenId="7bd9ada7-d03f-42f7-a556-4ddab2e19a47" CvTextArea="725, 291, 486, 45" CvTextArgument="Create a strong password" CvType="Text" DesignTimeRectangle="19, 288, 1900, 48" ElementType="Text" FuzzySelectorArgument="&lt;webctrl class='title-container' tag='DIV' type='' aaname='Create a strong password' check:innerText='Create a strong password' /&gt;" Guid="b6f456bf-ab29-4f61-9cfb-d4f6b7ad2cd1" SearchSteps="FuzzySelector, CV" />
+                                    </scg:List>
+                                  </uix:TargetAnchorable.Anchors>
+                                </uix:TargetAnchorable>
+                              </uix:NGetText.Target>
+                            </uix:NGetText>
+                          </Sequence>
+                        </ActivityAction>
+                      </ueab:ExcelForEachRowX.Body>
+                    </ueab:ExcelForEachRowX>
+                  </Sequence>
+                </ActivityAction>
+              </uix:NApplicationCard.Body>
+              <uix:NApplicationCard.TargetApp>
+                <uix:TargetApp Area="-856, 1084, 1938, 1098" BrowserType="Chrome" IconBase64="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" InformativeScreenshot="2dabdc432a052eb2cf5876698bab63b2.jpg" Selector="&lt;html app='chrome.exe' title='Password Generator' /&gt;" Title="Password Generator" Url="https://www.rpasamples.com/passwordgenerator" />
+              </uix:NApplicationCard.TargetApp>
+            </uix:NApplicationCard>
+            <uga:SendEmailConnections ArgumentAttachmentPaths="{x:Null}" ArgumentAttachments="{x:Null}" ConnectionAccountName="{x:Null}" AttachmentInputMode="UseExisting" AttachmentPaths="{x:Null}" AuthScopesInvalid="False" Bcc="{x:Null}" Body="[string.Format(&quot;&lt;P&gt;&lt;SPAN&gt;Hi there!&lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN&gt;&#xD;&#xA;Find attached the login credentials&#xD;&#xA;for this group of new joiners.&#xD;&#xA;&lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN&gt;Cheers,&#xD;&#xA;Terry&lt;/SPAN&gt;&lt;/P&gt;&quot;)]" Cc="{x:Null}" ConnectionId="04e4006a-ea44-432e-b9da-5ec4e5aad548" ContinueOnError="{x:Null}" DisplayName="Send Email" sap:VirtualizedContainerService.HintSize="498,775" sap2010:WorkflowViewState.IdRef="SendEmailConnections_1" Importance="Normal" InputType="HTML" ReplyTo="{x:Null}" SaveAsDraft="True" SingleAttachment="{x:Null}" Subject="[string.Format(&quot;New joiner credentials&quot;&quot;&quot;)]" TextBody="{x:Null}" To="[New String(){&quot;citizen.developer@uipath.com&quot;}]" UseConnectionService="True">
+              <uga:SendEmailConnections.Attachments>
+                <InArgument x:TypeArguments="scg:IEnumerable(upr:IResource)" />
+              </uga:SendEmailConnections.Attachments>
+              <uga:SendEmailConnections.AttachmentsBackup>
+                <usau:BackupSlot x:TypeArguments="ugage:AttachmentInputMode" StoredValue="UseExisting">
+                  <usau:BackupSlot.BackupValues>
+                    <scg:Dictionary x:TypeArguments="ugage:AttachmentInputMode, scg:List(x:Object)" />
+                  </usau:BackupSlot.BackupValues>
+                </usau:BackupSlot>
+              </uga:SendEmailConnections.AttachmentsBackup>
+              <uga:SendEmailConnections.InputTypeBackup>
+                <usau:BackupSlot x:TypeArguments="ugage:BodyInputType" StoredValue="HTML">
+                  <usau:BackupSlot.BackupValues>
+                    <scg:Dictionary x:TypeArguments="ugage:BodyInputType, scg:List(x:Object)" />
+                  </usau:BackupSlot.BackupValues>
+                </usau:BackupSlot>
+              </uga:SendEmailConnections.InputTypeBackup>
+            </uga:SendEmailConnections>
+          </Sequence>
+        </ActivityAction>
+      </ueab:ExcelApplicationCard.Body>
+    </ueab:ExcelApplicationCard>
+  </ueab:SequenceX>
 </Activity>

@@ -4,7 +4,10 @@
   "description": "Each month a list of email addresses of the new joiners arrive in an excel sheet. Then useing a website we need to generate a password and save that back in the excelsheet then email it to the new user.\r\nhttps://academy.uipath.com/learningpath-viewer/8650/1/515857/16",
   "main": "Main.xaml",
   "dependencies": {
+    "UiPath.Excel.Activities": "[2.24.3]",
     "UiPath.GitHub.IntegrationService.Activities": "[5.0.7]",
+    "UiPath.GoogleCloud.Activities": "[2.4.1]",
+    "UiPath.GSuite.Activities": "[2.7.23]",
     "UiPath.System.Activities": "[24.11.0-preview]",
     "UiPath.UIAutomation.Activities": "[24.11.1-preview]"
   },
@@ -49,5 +52,5 @@
   "isTemplate": false,
   "templateProjectData": {},
   "publishData": {},
-  "targetFramework": "Portable"
+  "targetFramework": "Windows"
 }
